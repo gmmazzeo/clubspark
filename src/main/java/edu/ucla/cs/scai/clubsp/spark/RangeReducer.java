@@ -14,8 +14,8 @@ public class RangeReducer implements Function2<Range, Range, Range> {
             if (r2.inf[i] < r1.inf[i]) {
                 r1.inf[i]=r2.inf[i];
             }
-            if (r2.inf[i] < r1.inf[i]) {
-                r1.inf[i]=r2.inf[i];
+            if (r2.sup[i] > r1.sup[i]) {
+                r1.sup[i]=r2.sup[i];
             }
         }
         return r1;
